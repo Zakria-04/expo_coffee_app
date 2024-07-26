@@ -28,5 +28,26 @@ const Images = {
   menu: () => require("./menu.png"),
   leftArrow: () => require("./left-arrow.png"),
   search: () => require("./search.png"),
+  americano_pic_1_portrait: () => require("./americano_pic_1_portrait.png"),
+  americano_pic_2_portrait: () => require("./americano_pic_2_portrait.png"),
+  americano_pic_3_portrait: () => require("./americano_pic_3_portrait.png"),
+  black_coffee_pic_1_portrait: () =>
+    require("./black_coffee_pic_1_portrait.png"),
+  black_coffee_pic_2_portrait: () =>
+    require("./black_coffee_pic_2_portrait.png"),
+  black_coffee_pic_3_portrait: () =>
+    require("./black_coffee_pic_3_portrait.png"),
+  cappuccino_pic_1_portrait: () => require("./cappuccino_pic_1_portrait.png"),
+  cappuccino_pic_2_portrait: () => require("./cappuccino_pic_2_portrait.png"),
+  cappuccino_pic_3_portrait: () => require("./cappuccino_pic_3_portrait.png"),
+  espresso_pic_1_portrait: () => require("./espresso_pic_1_portrait.png"),
+  espresso_pic_2_portrait: () => require("./espresso_pic_2_portrait.png"),
+  espresso_pic_3_portrait: () => require("./espresso_pic_3_portrait.png"),
+  latte_pic_1_portrait: () => require("./latte_pic_1_portrait.png"),
+  latte_pic_2_portrait: () => require("./latte_pic_2_portrait.png"),
+  latte_pic_3_portrait: () => require("./latte_pic_3_portrait.png"),
+  macchiato_pic_1_portrait: () => require("./macchiato_pic_1_portrait.png"),
+  macchiato_pic_2_portrait: () => require("./macchiato_pic_2_portrait.png"),
+  macchiato_pic_3_portrait: () => require("./macchiato_pic_3_portrait.png"),
 };
 export default Images;

@@ -16,7 +16,7 @@ const Products = (props) => {
   const Navigation = useNavigation();
 
   const onProductPress = (item) => {
-    Navigation.navigate("ProductScreen", { data: item });
+    Navigation.navigate("ProductScreen");
   };
 
   const renderCoffee = ({ item }) => {

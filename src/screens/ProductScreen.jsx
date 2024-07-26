@@ -1,15 +1,22 @@
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import ProductFooter from "../components/ProductFootter"
 
 const ProductScreen = (props) => {
   const getProduct = props.route.params.data;
   console.log("product ", getProduct);
   return (
     <View style={styles.container}>
-      <ImageBackground source={getProduct.img} resizeMode="cover" style={styles.backImg}>
-
+      <ImageBackground
+        source={getProduct.productImg}
+        resizeMode="cover"
+        style={styles.backImg}
+      >
+        <View style={styles.backImgContainer}>
+          <Text>{getProduct.product}</Text>
+        </View>
       </ImageBackground>
-      <Text>{getProduct.product}</Text>
+      <ProductFooter />
     </View>
   );
 };
@@ -21,7 +28,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   backImg: {
-    flex: 1,
-    justifyContent: 'center'
-  }
+    flex: 2,
+    justifyContent: "center",
+    height: "70%",
+  },
+  backImgContainer: {
+    flex: 3,
+  },
 });

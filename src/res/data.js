@@ -7,6 +7,7 @@ const CoffeeList = [
     product: "Americano",
     description: "description about the coffee/bean",
     img: Images.americano_pic_1_square(),
+    productImg: Images.americano_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -15,6 +16,7 @@ const CoffeeList = [
     product: "Americano",
     description: "description about the coffee/bean",
     img: Images.americano_pic_2_square(),
+    productImg: Images.americano_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -23,6 +25,7 @@ const CoffeeList = [
     product: "Americano",
     description: "description about the coffee/bean",
     img: Images.americano_pic_3_square(),
+    productImg: Images.americano_pic_3_portrait(),
     price: 2.99,
   },
   {
@@ -31,6 +34,7 @@ const CoffeeList = [
     product: "Black Coffee",
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_1_square(),
+    productImg: Images.black_coffee_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -39,6 +43,7 @@ const CoffeeList = [
     product: "Black Coffee",
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_2_square(),
+    productImg: Images.black_coffee_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -47,6 +52,7 @@ const CoffeeList = [
     product: "Black Coffee",
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_3_square(),
+    productImg: Images.black_coffee_pic_3_portrait(),
     price: 2.99,
   },
   {
@@ -55,6 +61,7 @@ const CoffeeList = [
     product: "Cappuccino",
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_1_square(),
+    productImg: Images.cappuccino_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -63,6 +70,7 @@ const CoffeeList = [
     product: "Cappuccino",
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_2_square(),
+    productImg: Images.cappuccino_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -71,6 +79,7 @@ const CoffeeList = [
     product: "Cappuccino",
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_3_square(),
+    productImg: Images.cappuccino_pic_3_portrait(),
     price: 2.99,
   },
   {
@@ -79,6 +88,7 @@ const CoffeeList = [
     product: "espresso",
     description: "description about the coffee/bean",
     img: Images.espresso_pic_1_square(),
+    productImg: Images.espresso_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -87,6 +97,7 @@ const CoffeeList = [
     product: "espresso",
     description: "description about the coffee/bean",
     img: Images.espresso_pic_2_square(),
+    productImg: Images.espresso_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -95,6 +106,7 @@ const CoffeeList = [
     product: "espresso",
     description: "description about the coffee/bean",
     img: Images.espresso_pic_3_square(),
+    productImg: Images.espresso_pic_3_portrait(),
     price: 2.99,
   },
   {
@@ -103,6 +115,7 @@ const CoffeeList = [
     product: "latte",
     description: "description about the coffee/bean",
     img: Images.latte_pic_1_square(),
+    productImg: Images.latte_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -110,7 +123,8 @@ const CoffeeList = [
     category: "latte",
     product: "latte",
     description: "description about the coffee/bean",
-    img: Images.latte_pic_1_square(),
+    img: Images.latte_pic_2_square(),
+    productImg: Images.latte_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -118,7 +132,8 @@ const CoffeeList = [
     category: "latte",
     product: "latte",
     description: "description about the coffee/bean",
-    img: Images.latte_pic_1_square(),
+    img: Images.latte_pic_3_square(),
+    productImg: Images.latte_pic_3_portrait(),
     price: 2.99,
   },
   {
@@ -127,6 +142,7 @@ const CoffeeList = [
     product: "Macchiato",
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_1_square(),
+    productImg: Images.macchiato_pic_1_portrait(),
     price: 2.99,
   },
   {
@@ -135,6 +151,7 @@ const CoffeeList = [
     product: "Macchiato",
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_2_square(),
+    productImg: Images.macchiato_pic_2_portrait(),
     price: 2.99,
   },
   {
@@ -143,6 +160,7 @@ const CoffeeList = [
     product: "Macchiato",
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_3_square(),
+    productImg: Images.macchiato_pic_3_portrait(),
     price: 2.99,
   },
 ];
