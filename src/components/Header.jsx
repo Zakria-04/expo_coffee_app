@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <View>
       <View style={styles.headerContainer}>
-        <Image source={Images.menu()} />
+        <Image style={styles.menuImg} source={Images.menu()} />
         <Text style={styles.logoText}>{logoText}</Text>
         <Text style={styles.signUpText}>{signUp}</Text>
       </View>
@@ -20,7 +20,7 @@ export default Header;
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   logoText: {
@@ -29,6 +29,12 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     fontSize: 15,
-    color: '#fff'
-  }
+    color: "#fff",
+    marginRight: 15,
+  },
+  menuImg: {
+    width: 40,
+    height: 40,
+    marginLeft: 15,
+  },
 });

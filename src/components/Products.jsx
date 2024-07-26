@@ -1,15 +1,37 @@
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import CoffeeList from "../res/data";
+import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "expo-router";
 
-const Products = ({ currency, item }) => {
+const Products = (props) => {
+  const { currency, item, category } = props;
+  const Navigation = useNavigation();
+
+  const onProductPress = (item) => {
+    Navigation.navigate("ProductScreen", { data: item });
+  };
+
   const renderCoffee = ({ item }) => {
     const { product, price, img } = item;
     return (
       <View style={styles.itemContainer}>
-        <Image style={styles.itemImg} source={img} />
-        <Text style={styles.itemProduct}>{product}</Text>
-        <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
+        <TouchableOpacity
+          onPress={() => {
+            onProductPress(item);
+          }}
+        >
+          <Image style={styles.itemImg} source={img} />
+          <Text style={styles.itemProduct}>{product}</Text>
+          <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -45,7 +67,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     textAlign: "center",
     fontSize: 20,
-    marginTop: 15
+    marginTop: 15,
   },
   itemPrice: {
     color: "#FF7D29",

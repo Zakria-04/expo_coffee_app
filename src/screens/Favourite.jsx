@@ -1,16 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const cart = () => {
+const Favourite = () => {
   return (
     <View>
-      <Text>cart</Text>
+      <Text>Favourite</Text>
     </View>
   )
 }
 
-export default cart
+export default Favourite
 
-const styles = StyleSheet.create({
-    
-})
+const styles = StyleSheet.create({})
