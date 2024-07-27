@@ -12,13 +12,12 @@ const Home = () => {
   const [item, setItem] = useState(CoffeeList);
   const [search, setSearch] = useState("");
   const {data} = useLocalSearchParams()
-  console.log(data);
+  console.log("data is ", data);
 
   return (
     <View style={styles.container}>
       <ScrollView>
         <SafeAreaView>
-          <StatusBar />
           {/* Header */}
           <Header logoText="Coffee-App" signUp="SignUp" />
           {/* Search */}

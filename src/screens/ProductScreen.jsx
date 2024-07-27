@@ -1,22 +1,19 @@
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import React from "react";
-import ProductFooter from "../components/ProductFootter"
+import React, { useContext } from "react";
+import ProductFooter from "../components/ProductFootter";
+import CartContext from "../../store/CartContext";
 
 const ProductScreen = (props) => {
-  const getProduct = props.route.params.data;
-  console.log("product ", getProduct);
+  const { cart, setCart } = useContext(CartContext);
+  console.log(cart);
+  const getData = props.route.params.data;
+  console.log(getData);
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={getProduct.productImg}
-        resizeMode="cover"
-        style={styles.backImg}
-      >
-        <View style={styles.backImgContainer}>
-          <Text>{getProduct.product}</Text>
-        </View>
-      </ImageBackground>
-      <ProductFooter />
+        source={getData.productImg}
+        style={styles.productImg}
+      ></ImageBackground>
     </View>
   );
 };
@@ -26,13 +23,9 @@ export default ProductScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#021526'
   },
-  backImg: {
-    flex: 2,
-    justifyContent: "center",
-    height: "70%",
-  },
-  backImgContainer: {
-    flex: 3,
+  productImg: {
+    height: "80%",
   },
 });

@@ -9,14 +9,13 @@ import {
 import React from "react";
 import CoffeeList from "../res/data";
 import { useNavigation } from "@react-navigation/native";
-// import { useNavigation } from "expo-router";
 
 const Products = (props) => {
   const { currency, item, category } = props;
   const Navigation = useNavigation();
 
   const onProductPress = (item) => {
-    Navigation.navigate("ProductScreen");
+    Navigation.navigate("product", {data: item})
   };
 
   const renderCoffee = ({ item }) => {

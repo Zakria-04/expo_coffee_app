@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const Favourite = () => {
+const Favourite = ({route}) => {
   return (
     <View>
-      <Text>Favourite</Text>
+      <SafeAreaView>
+        <Text>Favourite</Text>
+      </SafeAreaView>
     </View>
-  )
-}
+  );
+};
 
-export default Favourite
+export default Favourite;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

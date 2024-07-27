@@ -1,16 +1,18 @@
-import { Stack } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import MainNav from "./index";
+import CartProvider from "../store/CartProvider";
 
-const RootLayout = () => {
+const StackNav = () => {
   return (
-    <Stack>
-      <Stack.Screen
-        name="(tabs)"
-        options={{
-          headerShown: false,
-        }}
-      />
-    </Stack>
+    <View style={{ flex: 1 }}>
+      <CartProvider>
+        <MainNav />
+      </CartProvider>
+    </View>
   );
 };
 
-export default RootLayout;
+export default StackNav;
+
+const styles = StyleSheet.create({});
