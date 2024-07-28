@@ -8,7 +8,14 @@ const Favourite = () => {
   const { favourite, setFavourite } = useContext(FavouriteContext);
 
   const checkIfFavouriteEmpty = () => {
-    return <EmptyList exptyMessage="Your Favourite list is Empty" />;
+    return (
+      <EmptyList
+        exptyMessage="Your Favourite list is Empty"
+        name="heart"
+        size={40}
+        color="red"
+      />
+    );3
   };
 
   return (
@@ -31,6 +38,6 @@ export default Favourite;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#021526'
+    backgroundColor: "#021526",
   },
 });

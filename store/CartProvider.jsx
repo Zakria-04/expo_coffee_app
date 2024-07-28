@@ -2,7 +2,7 @@ import { useState } from "react";
 import CartContext from "./CartContext";
 
 const CartProvider = (props) => {
-  const [cart, setCart] = useState(["h"]);
+  const [cart, setCart] = useState([]);
   const CartProvider = {
     cart,
     setCart,

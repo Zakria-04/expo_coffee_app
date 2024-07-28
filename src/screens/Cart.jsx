@@ -9,7 +9,14 @@ const Cart = () => {
   const { cart } = useContext(CartContext);
 
   const checkIfCartInOrders = () => {
-    return <EmptyList exptyMessage="Your cart is Empty" />;
+    return (
+      <EmptyList
+        exptyMessage="Your cart is Empty"
+        name="cafe"
+        size={40}
+        color={"#914F1E"}
+      />
+    );
   };
 
   return (
@@ -20,7 +27,7 @@ const Cart = () => {
         ) : (
           <View>
             <Text>Not Empty</Text>
-            <Ionicons name="heart-outline" size={30} color={"red"} />
+            <Ionicons name="heart" size={30} color={"red"} />
           </View>
         )}
       </SafeAreaView>
