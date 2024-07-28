@@ -11,8 +11,6 @@ import { useLocalSearchParams } from "expo-router";
 const Home = () => {
   const [item, setItem] = useState(CoffeeList);
   const [search, setSearch] = useState("");
-  const {data} = useLocalSearchParams()
-  console.log("data is ", data);
 
   return (
     <View style={styles.container}>

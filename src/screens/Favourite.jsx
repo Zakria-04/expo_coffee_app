@@ -1,12 +1,26 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import EmptyList from "../components/EmptyList";
+import FavouriteContext from "@/store/FavouriteContext";
 
-const Favourite = ({route}) => {
+const Favourite = () => {
+  const { favourite, setFavourite } = useContext(FavouriteContext);
+
+  const checkIfFavouriteEmpty = () => {
+    return <EmptyList exptyMessage="Your Favourite list is Empty" />;
+  };
+
   return (
-    <View>
+    <View style={styles.container}>
       <SafeAreaView>
-        <Text>Favourite</Text>
+        {favourite.length === 0 ? (
+          checkIfFavouriteEmpty()
+        ) : (
+          <View>
+            <Text>Item not empty</Text>
+          </View>
+        )}
       </SafeAreaView>
     </View>
   );
@@ -14,4 +28,9 @@ const Favourite = ({route}) => {
 
 export default Favourite;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#021526'
+  },
+});
