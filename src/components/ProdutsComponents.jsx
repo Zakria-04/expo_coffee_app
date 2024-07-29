@@ -5,12 +5,10 @@ import RenderProducts from "../components/RenderProducts";
 
 const ProdutsComponents = (props) => {
   const { products, setItem } = props;
-  const [render, setRender] = useState(true);
-  const [black, setBlack] = useState(true);
 
   return (
     <View>
-      {/* {render && (
+      {/* {/* {render && (
         <Products
           category="Americano"
           products={products}
@@ -18,28 +16,19 @@ const ProdutsComponents = (props) => {
           setItem={setItem}
           setRender={setRender}
         />
-      )}
-      {black && (
+      )} */}
         <Products
           category="black coffee"
           products={products}
           currency="$"
           setItem={setItem}
-          setBlack={setBlack}
         />
-      )} */}
-      <RenderProducts
+      {/* <RenderProducts
         products={products}
         category="Americano"
         setRender={setRender}
         render={render}
-      />
-      <RenderProducts
-        products={products}
-        category="Americano"
-        setRender={setRender}
-        render={render}
-      />
+      /> */}
     </View>
   );
 };

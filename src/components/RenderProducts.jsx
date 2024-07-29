@@ -3,7 +3,6 @@ import React from "react";
 
 const RenderProducts = (props) => {
   const { products, category, setRender, render } = props;
-
   const renderProducts = ({ item }) => {
     return (
       <View>
@@ -15,7 +14,12 @@ const RenderProducts = (props) => {
   return (
     <View>
       <Text style={{ color: "#fff" }}>{category}</Text>
-      <FlatList data={products} renderItem={renderProducts} horizontal />
+      <FlatList
+        data={products}
+        renderItem={renderProducts}
+        numColumns={2}
+        ListEmptyComponent={() => <Text>Empty</Text>}
+      />
     </View>
   );
 };

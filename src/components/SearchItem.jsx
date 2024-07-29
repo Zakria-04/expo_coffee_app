@@ -4,7 +4,7 @@ import Images from "../assets/images/images";
 import CoffeeList from "../res/data";
 
 const SearchItem = ({ setSearch, search, item, setItem }) => {
-  console.log("searching ", search);
+  // console.log("searching ", search);
 
   const filterSearch = (value) => {
     console.log("value is ", value);

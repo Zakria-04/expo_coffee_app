@@ -9,6 +9,7 @@ const CoffeeList = [
     img: Images.americano_pic_1_square(),
     productImg: Images.americano_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const CoffeeList = [
     img: Images.americano_pic_2_square(),
     productImg: Images.americano_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const CoffeeList = [
     img: Images.americano_pic_3_square(),
     productImg: Images.americano_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ const CoffeeList = [
     img: Images.black_coffee_pic_1_square(),
     productImg: Images.black_coffee_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ const CoffeeList = [
     img: Images.black_coffee_pic_2_square(),
     productImg: Images.black_coffee_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ const CoffeeList = [
     img: Images.black_coffee_pic_3_square(),
     productImg: Images.black_coffee_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ const CoffeeList = [
     img: Images.cappuccino_pic_1_square(),
     productImg: Images.cappuccino_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ const CoffeeList = [
     img: Images.cappuccino_pic_2_square(),
     productImg: Images.cappuccino_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 9,
@@ -81,6 +89,7 @@ const CoffeeList = [
     img: Images.cappuccino_pic_3_square(),
     productImg: Images.cappuccino_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 10,
@@ -90,6 +99,7 @@ const CoffeeList = [
     img: Images.espresso_pic_1_square(),
     productImg: Images.espresso_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 11,
@@ -99,6 +109,7 @@ const CoffeeList = [
     img: Images.espresso_pic_2_square(),
     productImg: Images.espresso_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 12,
@@ -108,6 +119,7 @@ const CoffeeList = [
     img: Images.espresso_pic_3_square(),
     productImg: Images.espresso_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 13,
@@ -117,6 +129,7 @@ const CoffeeList = [
     img: Images.latte_pic_1_square(),
     productImg: Images.latte_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 14,
@@ -126,6 +139,7 @@ const CoffeeList = [
     img: Images.latte_pic_2_square(),
     productImg: Images.latte_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 15,
@@ -135,6 +149,7 @@ const CoffeeList = [
     img: Images.latte_pic_3_square(),
     productImg: Images.latte_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 16,
@@ -144,6 +159,7 @@ const CoffeeList = [
     img: Images.macchiato_pic_1_square(),
     productImg: Images.macchiato_pic_1_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 17,
@@ -153,6 +169,7 @@ const CoffeeList = [
     img: Images.macchiato_pic_2_square(),
     productImg: Images.macchiato_pic_2_portrait(),
     price: 2.99,
+    favourite: false
   },
   {
     id: 18,
@@ -162,6 +179,7 @@ const CoffeeList = [
     img: Images.macchiato_pic_3_square(),
     productImg: Images.macchiato_pic_3_portrait(),
     price: 2.99,
+    favourite: false
   },
 ];
 

@@ -28,7 +28,7 @@ const Home = () => {
           {/* Category */}
           <Category setItem={setItem} />
           {/* Products */}
-          <ProductsComponents products={item} setItem={setItem} />
+          <Products products={item} setItem={setItem} />
         </SafeAreaView>
       </ScrollView>
     </View>

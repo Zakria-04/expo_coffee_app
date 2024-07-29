@@ -5,34 +5,32 @@ import {
   View,
   Image,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import React, { useContext } from "react";
 import ProductFooter from "../components/ProductFootter";
 import CartContext from "../../store/CartContext";
 import Images from "../assets/images/images";
 import { Ionicons } from "@expo/vector-icons";
+import ProductHeader from "../components/ProductHeader";
 
 const ProductScreen = (props) => {
   const { cart, setCart } = useContext(CartContext);
   const getData = props.route.params.data;
+  const goBack = () => {
+    props.navigation.goBack();
+  };
 
   return (
     <View style={styles.container}>
-      <View>
-        <Image
+      <ScrollView>
+        <ImageBackground
           source={Images.americano_pic_1_portrait()}
-          style={styles.productImg}
-        />
-      </View>
-      <View style={styles.backBtnContainer}>
-        <TouchableOpacity
-          onPress={() => {
-            props.navigation.goBack();
-          }}
+          imageStyle={styles.productImg}
         >
-          <Ionicons name="arrow-back-outline" size={50} color={"#FF8225"} />
-        </TouchableOpacity>
-      </View>
+          <ProductHeader goBack={goBack} getData={getData} />
+        </ImageBackground>
+      </ScrollView>
       <ProductFooter price={getData.price} currency={"$"} />
     </View>
   );
@@ -46,17 +44,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#021526",
   },
   productImg: {
-    height: "85%",
-    width: "100%",
+    height: 650,
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
-  },
-  product: {
-    color: "#fff",
-  },
-  backBtnContainer: {
-    position: "absolute",
-    top: 50,
-    left: 20,
   },
 });

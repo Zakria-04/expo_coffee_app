@@ -14,8 +14,6 @@ const Products = (props) => {
   const { currency, products, category, setItem, setRender } = props;
   const Navigation = useNavigation();
 
-  
-
   const onProductPress = (item) => {
     Navigation.navigate("product", { data: item });
   };
@@ -43,7 +41,12 @@ const Products = (props) => {
   return (
     <View>
       <Text style={styles.categoryText}>{category}</Text>
-      <FlatList data={products} renderItem={renderCoffee} horizontal />
+      <FlatList
+        data={products}
+        renderItem={renderCoffee}
+        numColumns={2}
+        scrollEnabled={false}
+      />
     </View>
   );
 };

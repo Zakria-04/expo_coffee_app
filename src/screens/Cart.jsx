@@ -21,7 +21,6 @@ const Cart = () => {
         ) : (
           <View>
             <Text>Not Empty</Text>
-            <Ionicons name="heart" size={30} color={"red"} />
           </View>
         )}
       </SafeAreaView>

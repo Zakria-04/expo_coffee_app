@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import EmptyList from "../components/EmptyList";
 import FavouriteContext from "@/store/FavouriteContext";
+import FavouriteItem from "../components/FavouriteItem"
 
 const Favourite = () => {
   const { favourite, setFavourite } = useContext(FavouriteContext);
@@ -19,7 +20,7 @@ const Favourite = () => {
           />
         ) : (
           <View>
-            <Text>Item not empty</Text>
+            <FavouriteItem setFavourite={setFavourite} favourite={favourite} />
           </View>
         )}
       </SafeAreaView>
