@@ -14,14 +14,7 @@ const Nav = () => {
         headerShown: false,
         tabBarHideOnKeyboard: true,
         tabBarShowLabel: false,
-        tabBarStyle: {
-          height: 90,
-          position: "absolute",
-          backgroundColor: "rgba(2,21,38,0.5)",
-          borderTopWidth: 0,
-          elevation: 0,
-          borderTopColor: "transparent",
-        },
+        tabBarStyle: styles.tabBarStyle,
         tabBarBackground: () => (
           <BlurView
             overlayColor=""
@@ -77,6 +70,14 @@ const Nav = () => {
 export default Nav;
 
 const styles = StyleSheet.create({
+  tabBarStyle: {
+    height: 90,
+    position: "absolute",
+    backgroundColor: "rgba(2,21,38,0.5)",
+    borderTopWidth: 0,
+    elevation: 0,
+    borderTopColor: "transparent",
+  },
   blurViewStyles: {
     position: "absolute",
     top: 0,

@@ -7,22 +7,16 @@ import FavouriteContext from "@/store/FavouriteContext";
 const Favourite = () => {
   const { favourite, setFavourite } = useContext(FavouriteContext);
 
-  const checkIfFavouriteEmpty = () => {
-    return (
-      <EmptyList
-        exptyMessage="Your Favourite list is Empty"
-        name="heart"
-        size={40}
-        color="red"
-      />
-    );3
-  };
-
   return (
     <View style={styles.container}>
       <SafeAreaView>
         {favourite.length === 0 ? (
-          checkIfFavouriteEmpty()
+          <EmptyList
+            exptyMessage="Your Favourite list is Empty"
+            name="heart"
+            size={40}
+            color="red"
+          />
         ) : (
           <View>
             <Text>Item not empty</Text>

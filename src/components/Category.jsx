@@ -12,7 +12,7 @@ const Category = ({ setItem }) => {
   const categoryList = [...new Set(CoffeeList.map((val) => val.category))];
 
   const filterItems = (cat) => {
-    const newItems = CoffeeList.filter((newVal) => newVal.category == cat);
+    const newItems = CoffeeList.filter((newVal) => newVal.category === cat);
     setItem(newItems);
   };
 

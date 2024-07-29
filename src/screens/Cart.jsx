@@ -8,22 +8,16 @@ import { Ionicons } from "@expo/vector-icons";
 const Cart = () => {
   const { cart } = useContext(CartContext);
 
-  const checkIfCartInOrders = () => {
-    return (
-      <EmptyList
-        exptyMessage="Your cart is Empty"
-        name="cafe"
-        size={40}
-        color={"#914F1E"}
-      />
-    );
-  };
-
   return (
     <View style={styles.container}>
       <SafeAreaView>
         {cart.length === 0 ? (
-          checkIfCartInOrders()
+          <EmptyList
+            exptyMessage="Your cart is Empty"
+            name="cafe"
+            size={40}
+            color={"#914F1E"}
+          />
         ) : (
           <View>
             <Text>Not Empty</Text>

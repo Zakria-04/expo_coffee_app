@@ -6,7 +6,7 @@ import SearchItem from "../components/SearchItem";
 import Products from "../components/Products";
 import Category from "../components/Category";
 import CoffeeList from "../res/data";
-import { useLocalSearchParams } from "expo-router";
+import ProductsComponents from "../components/ProdutsComponents";
 
 const Home = () => {
   const [item, setItem] = useState(CoffeeList);
@@ -28,7 +28,7 @@ const Home = () => {
           {/* Category */}
           <Category setItem={setItem} />
           {/* Products */}
-          <Products item={item} currency="$" />
+          <ProductsComponents products={item} setItem={setItem} />
         </SafeAreaView>
       </ScrollView>
     </View>

@@ -11,38 +11,39 @@ import CoffeeList from "../res/data";
 import { useNavigation } from "@react-navigation/native";
 
 const Products = (props) => {
-  const { currency, item, category } = props;
+  const { currency, products, category, setItem, setRender } = props;
   const Navigation = useNavigation();
 
+  
+
   const onProductPress = (item) => {
-    Navigation.navigate("product", {data: item})
+    Navigation.navigate("product", { data: item });
   };
 
   const renderCoffee = ({ item }) => {
-    const { product, price, img } = item;
+    const { product, price, img, category } = item;
+
     return (
-      <View style={styles.itemContainer}>
-        <TouchableOpacity
-          onPress={() => {
-            onProductPress(item);
-          }}
-        >
-          <Image style={styles.itemImg} source={img} />
-          <Text style={styles.itemProduct}>{product}</Text>
-          <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
-        </TouchableOpacity>
+      <View>
+        <View style={styles.itemContainer}>
+          <TouchableOpacity
+            onPress={() => {
+              onProductPress(item);
+            }}
+          >
+            <Image style={styles.itemImg} source={img} />
+            <Text style={styles.itemProduct}>{product}</Text>
+            <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   };
 
   return (
     <View>
-      <FlatList
-        data={item}
-        renderItem={renderCoffee}
-        numColumns={2}
-        scrollEnabled={false}
-      />
+      <Text style={styles.categoryText}>{category}</Text>
+      <FlatList data={products} renderItem={renderCoffee} horizontal />
     </View>
   );
 };
@@ -74,5 +75,8 @@ const styles = StyleSheet.create({
     fontSize: 17,
     marginTop: 10,
     marginBottom: 10,
+  },
+  categoryText: {
+    color: "#fff",
   },
 });
