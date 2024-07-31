@@ -25,10 +25,12 @@ const ProductScreen = (props) => {
     <View style={styles.container}>
       <ScrollView>
         <ImageBackground
-          source={Images.americano_pic_1_portrait()}
+          source={getData.productImg}
           imageStyle={styles.productImg}
         >
-          <ProductHeader goBack={goBack} getData={getData} />
+          <View style={styles.productHeader}>
+            <ProductHeader />
+          </View>
         </ImageBackground>
       </ScrollView>
       <ProductFooter price={getData.price} currency={"$"} />
@@ -47,5 +49,10 @@ const styles = StyleSheet.create({
     height: 650,
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
+  },
+  productHeader: {
+    paddingTop: 55,
+    paddingRight: 30,
+    paddingLeft: 30,
   },
 });

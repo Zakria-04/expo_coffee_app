@@ -7,13 +7,22 @@ import CoffeeList from "../res/data";
 const ProductHeader = (props) => {
   const { goBack, getData } = props;
   const { favourite, setFavourite } = useContext(FavouriteContext);
+  console.log("Favourite List",favourite);
 
-  const addToFavourite = () => {
+  const addToFavourite = async () => {
+    const checkData = getData.favourite;
+    if (checkData === false) {
+      console.log("must be added ");
+      getData.favourite = true;
+      console.log(getData);
+    } else {
+      console.log("must be remove ");
+      getData.favourite = false;
+      console.log(getData);
+    }
     const FavList = favourite;
     FavList.push(getData);
     setFavourite(FavList);
-    console.log("favourite list", favourite);
-    // favourite.map((val) => (val.favourite = true));
   };
 
   return (
@@ -46,8 +55,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 55,
-    marginLeft: 30,
-    marginRight: 30,
+    // marginTop: 55,
+    // marginLeft: 30,
+    // marginRight: 30,
   },
 });

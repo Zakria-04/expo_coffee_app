@@ -1,25 +1,58 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React, { useState } from "react";
+import {
+  FlatList,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import React, { useContext, useState } from "react";
+import FavouriteContext from "@/store/FavouriteContext";
+import Products from "./Products";
+import RenderProducts from "./RenderProducts";
+import ProductHeader from "./ProductHeader";
+import { useNavigation } from "@react-navigation/native";
 
 const FavouriteItem = (props) => {
-  const { setFavourite, favourite } = props;
+  const { favourite, setFavourite } = useContext(FavouriteContext);
+  // console.log("My Favourite", favourite);
+  const Navigation = useNavigation();
 
-  const filterFavourite = () => {
-    if (favourite.map(val => val.favourite == false)) {
-        console.log("must be removed");
-    }
+  const onProductPress = () => {
+    Navigation.navigate("product");
+  };
+
+  const renderFavourite = ({ item }) => {
+    return (
+      <View>
+        <TouchableOpacity onPress={() => {}}>
+          <ImageBackground source={item.productImg} style={styles.productImg}>
+            <ProductHeader getData={favourite} />
+            <Text>Hello World</Text>
+          </ImageBackground>
+        </TouchableOpacity>
+      </View>
+    );
   };
 
   return (
-    <View>
-      <Text>FavouriteItem</Text>
-      <TouchableOpacity onPress={filterFavourite()}>
-        <Text style={{ color: "#fff", fontSize: 20 }}>Hello World</Text>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <FlatList
+        data={favourite}
+        renderItem={renderFavourite}
+        scrollEnabled={false}
+      />
     </View>
   );
 };
 
 export default FavouriteItem;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
+  productImg: {
+    height: 500,
+  },
+});

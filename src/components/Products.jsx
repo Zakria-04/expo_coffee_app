@@ -30,7 +30,7 @@ const Products = (props) => {
             }}
           >
             <Image style={styles.itemImg} source={img} />
-            <Text style={styles.itemProduct}>{product}</Text>
+            <Text style={styles.itemProduct}>{product}</Text> 
             <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
           </TouchableOpacity>
         </View>
