@@ -1,6 +1,7 @@
 import {
   FlatList,
   ImageBackground,
+  Pressable,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -28,15 +29,17 @@ const FavouriteItem = (props) => {
   const renderFavourite = ({ item }) => {
     return (
       <View>
-        <TouchableOpacity
+        <Pressable
           onPress={() => {
             onProductPress(item);
           }}
         >
-          <ImageBackground source={item.productImg} style={styles.productImg}>
-            
-          </ImageBackground>
-        </TouchableOpacity>
+          <ImageBackground
+            source={item.productImg}
+            style={styles.productImg}
+            imageStyle={{ borderRadius: 60 }}
+          ></ImageBackground>
+        </Pressable>
       </View>
     );
   };
@@ -60,5 +63,12 @@ const styles = StyleSheet.create({
   },
   productImg: {
     height: 500,
+    marginBottom: 50,
+    marginTop: 50
+  },
+  icon: {
+    alignItems: "flex-end",
+    marginRight: 30,
+    marginTop: 30,
   },
 });

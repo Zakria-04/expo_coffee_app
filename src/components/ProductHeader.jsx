@@ -25,10 +25,9 @@ const ProductHeader = (props) => {
     const FavList = favourite;
     FavList.push(getData);
     setFavourite(FavList);
-    
-    const filterFavList = favourite.filter(val => val.favourite === true)
-    setFavourite(filterFavList)
 
+    const filterFavList = favourite.filter((val) => val.favourite === true);
+    setFavourite(filterFavList);
   };
 
   return (
@@ -47,7 +46,7 @@ const ProductHeader = (props) => {
             addToFavourite();
           }}
         >
-          <Ionicons name="heart" size={50} color={"red"} style={styles.txt} />
+          <Ionicons name="heart" size={50} color={getData.favourite === true ? 'red' : '#222831'} style={styles.txt} />
         </TouchableOpacity>
       </View>
     </View>
@@ -61,8 +60,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    // marginTop: 55,
-    // marginLeft: 30,
-    // marginRight: 30,
   },
 });
