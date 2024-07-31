@@ -12,23 +12,29 @@ import Products from "./Products";
 import RenderProducts from "./RenderProducts";
 import ProductHeader from "./ProductHeader";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import ProductScreen from "../screens/ProductScreen";
 
 const FavouriteItem = (props) => {
   const { favourite, setFavourite } = useContext(FavouriteContext);
   // console.log("My Favourite", favourite);
+  console.log(favourite);
   const Navigation = useNavigation();
 
-  const onProductPress = () => {
-    Navigation.navigate("product");
+  const onProductPress = (item) => {
+    Navigation.navigate("product", { data: item });
   };
 
   const renderFavourite = ({ item }) => {
     return (
       <View>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity
+          onPress={() => {
+            onProductPress(item);
+          }}
+        >
           <ImageBackground source={item.productImg} style={styles.productImg}>
-            <ProductHeader getData={favourite} />
-            <Text>Hello World</Text>
+            
           </ImageBackground>
         </TouchableOpacity>
       </View>

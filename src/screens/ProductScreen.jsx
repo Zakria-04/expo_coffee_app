@@ -16,7 +16,10 @@ import ProductHeader from "../components/ProductHeader";
 
 const ProductScreen = (props) => {
   const { cart, setCart } = useContext(CartContext);
-  const getData = props.route.params.data;
+  const getData = props.route.params.data
+
+  console.log(getData);
+
   const goBack = () => {
     props.navigation.goBack();
   };
@@ -29,7 +32,7 @@ const ProductScreen = (props) => {
           imageStyle={styles.productImg}
         >
           <View style={styles.productHeader}>
-            <ProductHeader />
+            <ProductHeader getData={getData} goBack={goBack} />
           </View>
         </ImageBackground>
       </ScrollView>

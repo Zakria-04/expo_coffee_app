@@ -7,9 +7,11 @@ import CoffeeList from "../res/data";
 const ProductHeader = (props) => {
   const { goBack, getData } = props;
   const { favourite, setFavourite } = useContext(FavouriteContext);
-  console.log("Favourite List",favourite);
+  // console.log("Favourite List",favourite);
+  console.log(getData);
+  console.log(favourite);
 
-  const addToFavourite = async () => {
+  const addToFavourite = () => {
     const checkData = getData.favourite;
     if (checkData === false) {
       console.log("must be added ");
@@ -23,6 +25,10 @@ const ProductHeader = (props) => {
     const FavList = favourite;
     FavList.push(getData);
     setFavourite(FavList);
+    
+    const filterFavList = favourite.filter(val => val.favourite === true)
+    setFavourite(filterFavList)
+
   };
 
   return (
