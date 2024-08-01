@@ -19,7 +19,7 @@ const Products = (props) => {
   };
 
   const renderCoffee = ({ item }) => {
-    const { product, price, img, category } = item;
+    const { product, prices, img, category } = item;
 
     return (
       <View>
@@ -30,8 +30,10 @@ const Products = (props) => {
             }}
           >
             <Image style={styles.itemImg} source={img} />
-            <Text style={styles.itemProduct}>{product}</Text> 
-            <Text style={styles.itemPrice}>{`${price} ${currency}`}</Text>
+            <Text style={styles.itemProduct}>{product}</Text>
+            <Text
+              style={styles.itemPrice}
+            >{`${prices[0].price} ${currency}`}</Text>
           </TouchableOpacity>
         </View>
       </View>

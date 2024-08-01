@@ -8,8 +8,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.americano_pic_1_square(),
     productImg: Images.americano_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 2,
@@ -18,8 +22,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.americano_pic_2_square(),
     productImg: Images.americano_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 3,
@@ -28,8 +36,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.americano_pic_3_square(),
     productImg: Images.americano_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 4,
@@ -38,8 +50,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_1_square(),
     productImg: Images.black_coffee_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 5,
@@ -48,8 +64,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_2_square(),
     productImg: Images.black_coffee_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 6,
@@ -58,8 +78,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.black_coffee_pic_3_square(),
     productImg: Images.black_coffee_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
+    ],
+    favourite: false,
   },
   {
     id: 7,
@@ -68,8 +92,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_1_square(),
     productImg: Images.cappuccino_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 8,
@@ -78,8 +106,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_2_square(),
     productImg: Images.cappuccino_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 9,
@@ -88,8 +120,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.cappuccino_pic_3_square(),
     productImg: Images.cappuccino_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 10,
@@ -98,8 +134,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.espresso_pic_1_square(),
     productImg: Images.espresso_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 11,
@@ -108,8 +148,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.espresso_pic_2_square(),
     productImg: Images.espresso_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 12,
@@ -118,8 +162,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.espresso_pic_3_square(),
     productImg: Images.espresso_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 13,
@@ -128,8 +176,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.latte_pic_1_square(),
     productImg: Images.latte_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 14,
@@ -138,8 +190,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.latte_pic_2_square(),
     productImg: Images.latte_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 15,
@@ -148,8 +204,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.latte_pic_3_square(),
     productImg: Images.latte_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 16,
@@ -158,8 +218,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_1_square(),
     productImg: Images.macchiato_pic_1_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 17,
@@ -168,8 +232,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_2_square(),
     productImg: Images.macchiato_pic_2_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
   {
     id: 18,
@@ -178,8 +246,12 @@ const CoffeeList = [
     description: "description about the coffee/bean",
     img: Images.macchiato_pic_3_square(),
     productImg: Images.macchiato_pic_3_portrait(),
-    price: 2.99,
-    favourite: false
+    prices: [
+      {size: 'S', price: 2.99},
+      {size: 'M', price: 3.99},
+      {size: 'L', price: 5.99}
+    ],
+    favourite: false,
   },
 ];
 

@@ -1,9 +1,17 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  ScrollView,
+} from "react-native";
 import React, { createContext, useContext } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CartContext from "@/store/CartContext";
 import EmptyList from "../components/EmptyList";
 import { Ionicons } from "@expo/vector-icons";
+import Header from "../components/Header";
+import CartItem from "./../components/CartItem";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
@@ -20,7 +28,10 @@ const Cart = () => {
           />
         ) : (
           <View>
-            <Text>Not Empty</Text>
+            <ScrollView>
+              <Header logoText="Cart" signUp="SignUp" />
+              <CartItem />
+            </ScrollView>
           </View>
         )}
       </SafeAreaView>
