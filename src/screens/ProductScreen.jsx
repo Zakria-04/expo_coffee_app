@@ -16,9 +16,7 @@ import ProductHeader from "../components/ProductHeader";
 
 const ProductScreen = (props) => {
   const { cart, setCart } = useContext(CartContext);
-  const getData = props.route.params.data
-
-  console.log(getData);
+  const getData = props.route.params.data;
 
   const goBack = () => {
     props.navigation.goBack();
@@ -36,7 +34,7 @@ const ProductScreen = (props) => {
           </View>
         </ImageBackground>
       </ScrollView>
-      <ProductFooter price={getData.price} currency={"$"} />
+      <ProductFooter price={getData.price} currency={"$"} getData={getData} />
     </View>
   );
 };

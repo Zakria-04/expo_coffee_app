@@ -1,11 +1,22 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
+import { Modal, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { useContext, useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import CartContext from "@/store/CartContext";
+import LottieView from "lottie-react-native";
+import { useNavigation } from "@react-navigation/native";
+import AddToCartModal from "./AddToCartModal";
 
 const ProductFootter = (props) => {
-  const { price, currency } = props;
+  const { cart, setCart } = useContext(CartContext);
+  const { price, currency, getData } = props;
+  const [cartModal, setCartModal] = useState(false);
+  const Navigation = useNavigation();
 
-  const addToCartBtn = () => {};
+  const addToCartBtn = () => {
+    const CartList = cart;
+    CartList.push(getData);
+    setCart(CartList);
+  };
 
   return (
     <View style={styles.container}>
@@ -17,12 +28,20 @@ const ProductFootter = (props) => {
             <Text style={{ color: "#fff", fontSize: 20 }}>{` ${price}`}</Text>
           </Text>
         </View>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity
+          onPress={() => {
+            addToCartBtn();
+            setCartModal(true);
+          }}
+        >
           <View style={styles.addToCartContainer}>
             <Text style={styles.addToCartTxt}>Add to Cart</Text>
             <Ionicons name="basket" size={30} color={"#fff"} />
           </View>
         </TouchableOpacity>
+        <Modal visible={cartModal} transparent>
+          <AddToCartModal cartModal={cartModal} setCartModal={setCartModal} />
+        </Modal>
       </View>
     </View>
   );
@@ -35,7 +54,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginBottom: 35
+    marginBottom: 35,
   },
   priceText: {
     color: "#fff",
@@ -61,4 +80,45 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginRight: 5,
   },
+  PaymentModalContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(0,0,0,.5)",
+  },
+  borderContainer: {
+    backgroundColor: "#F3F7EC",
+    borderRadius: 15,
+  },
+  lottieStyle: {
+    width: 300,
+    height: 350,
+  },
+  // coffeeModalText: {
+  //   fontSize: 25,
+  //   textAlign: "center",
+  //   marginTop: 20,
+  //   color: "#543310",
+  // },
+  // closeBtn: {
+  //   alignItems: "flex-end",
+  //   marginRight: 10,
+  //   marginTop: 10,
+  // },
+  // modalBtnContainer: {
+  //   flexDirection: "row",
+  //   justifyContent: "space-around",
+  // },
+  // modalBtn: {
+  //   fontSize: 20,
+  //   padding: 15,
+  //   textAlign: "center",
+  //   color: "#fff",
+  // },
+  // modalBtnTxt: {
+  //   backgroundColor: "orange",
+  //   borderRadius: 10,
+  //   width: 100,
+  //   marginBottom: 25,
+  // },
 });

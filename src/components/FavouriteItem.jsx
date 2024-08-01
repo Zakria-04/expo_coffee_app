@@ -18,8 +18,6 @@ import ProductScreen from "../screens/ProductScreen";
 
 const FavouriteItem = (props) => {
   const { favourite, setFavourite } = useContext(FavouriteContext);
-  // console.log("My Favourite", favourite);
-  console.log(favourite);
   const Navigation = useNavigation();
 
   const onProductPress = (item) => {
@@ -64,7 +62,7 @@ const styles = StyleSheet.create({
   productImg: {
     height: 500,
     marginBottom: 50,
-    marginTop: 50
+    marginTop: 50,
   },
   icon: {
     alignItems: "flex-end",

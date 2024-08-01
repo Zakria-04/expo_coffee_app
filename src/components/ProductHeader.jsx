@@ -7,21 +7,11 @@ import CoffeeList from "../res/data";
 const ProductHeader = (props) => {
   const { goBack, getData } = props;
   const { favourite, setFavourite } = useContext(FavouriteContext);
-  // console.log("Favourite List",favourite);
-  console.log(getData);
-  console.log(favourite);
 
   const addToFavourite = () => {
     const checkData = getData.favourite;
-    if (checkData === false) {
-      console.log("must be added ");
-      getData.favourite = true;
-      console.log(getData);
-    } else {
-      console.log("must be remove ");
-      getData.favourite = false;
-      console.log(getData);
-    }
+    checkData === false ? getData.favourite = true : getData.favourite = false
+
     const FavList = favourite;
     FavList.push(getData);
     setFavourite(FavList);
@@ -46,7 +36,12 @@ const ProductHeader = (props) => {
             addToFavourite();
           }}
         >
-          <Ionicons name="heart" size={50} color={getData.favourite === true ? 'red' : '#222831'} style={styles.txt} />
+          <Ionicons
+            name="heart"
+            size={50}
+            color={getData.favourite === true ? "red" : "#222831"}
+            style={styles.txt}
+          />
         </TouchableOpacity>
       </View>
     </View>

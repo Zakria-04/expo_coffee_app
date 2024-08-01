@@ -28,7 +28,7 @@ const Home = () => {
           {/* Category */}
           <Category setItem={setItem} />
           {/* Products */}
-          <Products products={item} setItem={setItem} />
+          <Products products={item} setItem={setItem} currency={'$'} />
         </SafeAreaView>
       </ScrollView>
     </View>
