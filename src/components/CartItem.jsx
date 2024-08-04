@@ -1,27 +1,33 @@
-import { FlatList, StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, FlatList, Image } from "react-native";
 import React, { useContext } from "react";
 import CartContext from "@/store/CartContext";
 
 const CartItem = () => {
   const { cart, setCart } = useContext(CartContext);
+  console.log("Cart ", cart);
 
   const renderCart = ({ item }) => {
+    let price = item.cartTotal[0];
+    const { img, product } = item;
     return (
-      <View style={styles.itemContainer}>
-        <Image source={item.img} style={styles.img} />
-        <View style={styles.itemTxtContainer}>
-          <Text style={styles.productItem}>{item.product}</Text>
-          <Text style={styles.priceItem}>
-            {item.price}
-            <Text style={{ color: "orange" }}>$</Text>
-          </Text>
+      <View style={{ padding: 10 }}>
+        <View style={styles.itemContainer}>
+          <Image source={item.img} style={styles.imgItem} />
+          <View style={styles.itemTxtContainer}>
+            <Text style={styles.productItem}>{product}</Text>
+            <Text style={styles.sizeItem}>{price.size}</Text>
+            <Text style={styles.priceItem}>
+              {price.price}
+              <Text style={{ color: "orange" }}>$</Text>
+            </Text>
+          </View>
         </View>
       </View>
     );
   };
 
   return (
-    <View style={styles.container}>
+    <View>
       <FlatList data={cart} renderItem={renderCart} scrollEnabled={false} />
     </View>
   );
@@ -30,15 +36,12 @@ const CartItem = () => {
 export default CartItem;
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 50,
-    padding: 20,
-  },
   itemContainer: {
     flexDirection: "row",
     backgroundColor: "#29354b",
     padding: 15,
     borderRadius: 20,
+    marginTop: 30,
   },
   productItem: {
     color: "#fff",
@@ -49,12 +52,24 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 20,
   },
-  img: {
+  imgItem: {
     width: 150,
     height: 150,
     borderRadius: 50,
   },
   itemTxtContainer: {
-    marginLeft: 20,
+    marginLeft: 15,
+  },
+  sizeItem: {
+    fontSize: 20,
+    color: "#fff",
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: "#FF7D29",
+    padding: 5,
+    width: 50,
+    textAlign: "center",
+    borderRadius: 5,
+    marginBottom: 10
   },
 });

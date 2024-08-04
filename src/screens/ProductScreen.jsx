@@ -17,12 +17,43 @@ import ProductHeader from "../components/ProductHeader";
 const ProductScreen = (props) => {
   const { cart, setCart } = useContext(CartContext);
   const getData = props.route.params.data;
-  const [data, setData] = useState(getData);
+  const [price, setPrice] = useState(getData.prices[0]);
 
-  console.log(getData);
+  // const cartArray = [...new Set([getData])];
+  // cartArray.concat(price);
+  // console.log("My Array ", cartArray);
+
+  // const x = [getData]
+  // const y = [{price: price}]
+  // const z = x.concat(y)
+  // console.log(z);
+
+  // const x = [getData]
+  // const y = price
+  // const z = x.push(y)
+  // console.log(x);
+
+  // const addToCartBtn = () => {
+  //   const CartList = [getData];
+  //   CartList.push(price);
+  //   console.log(CartList);
+  // // console.log("Hey");
+  // };
 
   const goBack = () => {
     props.navigation.goBack();
+  };
+
+  const onSmallBtnClick = () => {
+    setPrice(getData.prices[0]);
+  };
+  const onMediomBtnClick = () => {
+    // console.log(getData.prices.splice(0,1));
+    setPrice(getData.prices[1]);
+  };
+
+  const onLargeBtnClick = () => {
+    setPrice(getData.prices[2]);
   };
 
   return (
@@ -36,7 +67,7 @@ const ProductScreen = (props) => {
             <ProductHeader getData={getData} goBack={goBack} />
           </View>
           <View style={styles.productImageFootter}>
-            {/* <Text style={{ color: "red", marginTop: 20 }}>Hello World</Text> */}
+            {/* <Text style={{ color: "red", marginTop: 20 }}>Name</Text> */}
           </View>
         </ImageBackground>
         <View style={styles.productBody}>
@@ -44,17 +75,29 @@ const ProductScreen = (props) => {
           <Text style={styles.descriptionTxt}>{getData.description}</Text>
           <View style={styles.sizeContainer}>
             <View style={styles.sizeBoxContainer}>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+                onPress={() => {
+                  onSmallBtnClick();
+                }}
+              >
                 <Text style={styles.size}>{getData.prices[0].size}</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.sizeBoxContainer}>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+                onPress={() => {
+                  onMediomBtnClick();
+                }}
+              >
                 <Text style={styles.size}>{getData.prices[1].size}</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.sizeBoxContainer}>
-              <TouchableOpacity onPress={() => {}}>
+              <TouchableOpacity
+                onPress={() => {
+                  onLargeBtnClick();
+                }}
+              >
                 <Text style={styles.size}>{getData.prices[2].size}</Text>
               </TouchableOpacity>
             </View>
@@ -62,9 +105,10 @@ const ProductScreen = (props) => {
         </View>
       </ScrollView>
       <ProductFooter
-        price={getData.prices[0].price}
+        price={price.price}
         currency={"$"}
         getData={getData}
+        totalPrice={price}
       />
     </View>
   );

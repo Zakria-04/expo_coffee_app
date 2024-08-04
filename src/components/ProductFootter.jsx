@@ -8,14 +8,22 @@ import AddToCartModal from "./AddToCartModal";
 
 const ProductFootter = (props) => {
   const { cart, setCart } = useContext(CartContext);
-  const { price, currency, getData } = props;
+  const { price, currency, getData, addToCart, totalPrice } = props;
   const [cartModal, setCartModal] = useState(false);
   const Navigation = useNavigation();
 
   const addToCartBtn = () => {
-    const CartList = cart;
-    CartList.push(getData);
-    setCart(CartList);
+    // const CartList = [getData];
+    // CartList.push(totalPrice)
+    // setCart(CartList)
+
+    // const CartList = [getData]
+    // const x = [totalPrice]
+    // const y = CartList.concat(x)
+    // console.log(y);
+    const CartList = getData
+    CartList.cartTotal = [totalPrice]
+    setCart([CartList])
   };
 
   return (
@@ -30,7 +38,8 @@ const ProductFootter = (props) => {
         </View>
         <TouchableOpacity
           onPress={() => {
-            addToCartBtn();
+            // addToCart
+            addToCartBtn()
             setCartModal(true);
           }}
         >

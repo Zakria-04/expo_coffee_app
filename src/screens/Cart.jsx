@@ -14,7 +14,7 @@ import Header from "../components/Header";
 import CartItem from "./../components/CartItem";
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
 
   return (
     <View style={styles.container}>

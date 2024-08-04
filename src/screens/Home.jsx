@@ -6,7 +6,6 @@ import SearchItem from "../components/SearchItem";
 import Products from "../components/Products";
 import Category from "../components/Category";
 import CoffeeList from "../res/data";
-import ProductsComponents from "../components/ProdutsComponents";
 
 const Home = () => {
   const [item, setItem] = useState(CoffeeList);
