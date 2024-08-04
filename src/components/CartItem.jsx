@@ -1,10 +1,21 @@
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
-import React, { useContext } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import React, { useContext, useState } from "react";
 import CartContext from "@/store/CartContext";
+import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import QuantityItem from "./QuantityItem";
 
-const CartItem = () => {
+const CartItem = ({ sd }) => {
   const { cart, setCart } = useContext(CartContext);
-  console.log("Cart ", cart);
+  const Navigation = useNavigation();
+  console.log(cart);
 
   const renderCart = ({ item }) => {
     let price = item.cartTotal[0];
@@ -12,7 +23,13 @@ const CartItem = () => {
     return (
       <View style={{ padding: 10 }}>
         <View style={styles.itemContainer}>
-          <Image source={item.img} style={styles.imgItem} />
+          <TouchableOpacity
+            onPress={() => {
+              Navigation.navigate("product", { data: item });
+            }}
+          >
+            <Image source={item.img} style={styles.imgItem} />
+          </TouchableOpacity>
           <View style={styles.itemTxtContainer}>
             <Text style={styles.productItem}>{product}</Text>
             <Text style={styles.sizeItem}>{price.size}</Text>
@@ -20,6 +37,9 @@ const CartItem = () => {
               {price.price}
               <Text style={{ color: "orange" }}>$</Text>
             </Text>
+          </View>
+          <View style={styles.quantityContainer}>
+            <QuantityItem item={item} />
           </View>
         </View>
       </View>
@@ -38,6 +58,7 @@ export default CartItem;
 const styles = StyleSheet.create({
   itemContainer: {
     flexDirection: "row",
+    justifyContent: "space-around",
     backgroundColor: "#29354b",
     padding: 15,
     borderRadius: 20,
@@ -56,9 +77,10 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 50,
+    marginRight: 20,
   },
   itemTxtContainer: {
-    marginLeft: 15,
+    // marginRight: 50,
   },
   sizeItem: {
     fontSize: 20,
@@ -70,6 +92,13 @@ const styles = StyleSheet.create({
     width: 50,
     textAlign: "center",
     borderRadius: 5,
-    marginBottom: 10
+    marginBottom: 10,
+  },
+  quantityItem: {
+    fontSize: 20,
+    color: "#fff",
+  },
+  quantityContainer: {
+    justifyContent: "center",
   },
 });

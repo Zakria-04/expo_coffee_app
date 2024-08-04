@@ -6,6 +6,7 @@ import SearchItem from "../components/SearchItem";
 import Products from "../components/Products";
 import Category from "../components/Category";
 import CoffeeList from "../res/data";
+import ProdutsComponents from "./../components/ProdutsComponents";
 
 const Home = () => {
   const [item, setItem] = useState(CoffeeList);
@@ -15,8 +16,8 @@ const Home = () => {
     <View style={styles.container}>
       <ScrollView>
         <SafeAreaView>
-          {/* Header */}
           <Header logoText="Coffee-App" signUp="SignUp" />
+          {/* Header */}
           {/* Search */}
           <SearchItem
             setSearch={setSearch}
@@ -27,7 +28,7 @@ const Home = () => {
           {/* Category */}
           <Category setItem={setItem} />
           {/* Products */}
-          <Products products={item} setItem={setItem} currency={'$'} />
+          <ProdutsComponents products={item} setItem={setItem} currency={"$"} />
         </SafeAreaView>
       </ScrollView>
     </View>

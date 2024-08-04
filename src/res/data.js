@@ -14,6 +14,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 5,
@@ -70,6 +74,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 6,
@@ -84,6 +89,7 @@ const CoffeeList = [
       { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 7,
@@ -93,11 +99,12 @@ const CoffeeList = [
     img: Images.cappuccino_pic_1_square(),
     productImg: Images.cappuccino_pic_1_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 8,
@@ -107,11 +114,12 @@ const CoffeeList = [
     img: Images.cappuccino_pic_2_square(),
     productImg: Images.cappuccino_pic_2_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 9,
@@ -121,11 +129,12 @@ const CoffeeList = [
     img: Images.cappuccino_pic_3_square(),
     productImg: Images.cappuccino_pic_3_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 10,
@@ -135,11 +144,12 @@ const CoffeeList = [
     img: Images.espresso_pic_1_square(),
     productImg: Images.espresso_pic_1_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 11,
@@ -149,11 +159,12 @@ const CoffeeList = [
     img: Images.espresso_pic_2_square(),
     productImg: Images.espresso_pic_2_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 12,
@@ -163,11 +174,12 @@ const CoffeeList = [
     img: Images.espresso_pic_3_square(),
     productImg: Images.espresso_pic_3_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 13,
@@ -177,11 +189,12 @@ const CoffeeList = [
     img: Images.latte_pic_1_square(),
     productImg: Images.latte_pic_1_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 14,
@@ -191,11 +204,12 @@ const CoffeeList = [
     img: Images.latte_pic_2_square(),
     productImg: Images.latte_pic_2_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 15,
@@ -205,11 +219,12 @@ const CoffeeList = [
     img: Images.latte_pic_3_square(),
     productImg: Images.latte_pic_3_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 16,
@@ -219,11 +234,12 @@ const CoffeeList = [
     img: Images.macchiato_pic_1_square(),
     productImg: Images.macchiato_pic_1_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 17,
@@ -233,11 +249,12 @@ const CoffeeList = [
     img: Images.macchiato_pic_2_square(),
     productImg: Images.macchiato_pic_2_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
   {
     id: 18,
@@ -247,11 +264,12 @@ const CoffeeList = [
     img: Images.macchiato_pic_3_square(),
     productImg: Images.macchiato_pic_3_portrait(),
     prices: [
-      {size: 'S', price: 2.99},
-      {size: 'M', price: 3.99},
-      {size: 'L', price: 5.99}
+      { size: "S", price: 2.99 },
+      { size: "M", price: 3.99 },
+      { size: "L", price: 5.99 },
     ],
     favourite: false,
+    quantity: 0,
   },
 ];
 

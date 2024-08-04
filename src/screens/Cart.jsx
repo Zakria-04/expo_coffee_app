@@ -30,7 +30,7 @@ const Cart = () => {
           <View>
             <ScrollView>
               <Header logoText="Cart" signUp="SignUp" />
-              <CartItem />
+              <CartItem sd="10" />
             </ScrollView>
           </View>
         )}

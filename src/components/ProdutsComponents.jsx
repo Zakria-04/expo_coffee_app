@@ -1,38 +1,49 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import Products from "./Products";
-import RenderProducts from "../components/RenderProducts";
 
 const ProdutsComponents = (props) => {
-  const { products, setItem } = props;
-
+  const { products, setItem, currency } = props;
   return (
     <View>
-      {/* {/* {render && (
-        <Products
-          category="Americano"
-          products={products}
-          currency="$"
-          setItem={setItem}
-          setRender={setRender}
-        />
-      )} */}
-        <Products
-          category="black coffee"
-          products={products}
-          currency="$"
-          setItem={setItem}
-        />
-      {/* <RenderProducts
+      <Products
+        category={"Americano"}
         products={products}
-        category="Americano"
-        setRender={setRender}
-        render={render}
-      /> */}
+        setItem={setItem}
+        currency={currency}
+      />
+      <Products
+        category={"Black Coffee"}
+        products={products}
+        setItem={setItem}
+        currency={currency}
+      />
+      <Products
+        category={"Cappuccino"}
+        products={products}
+        setItem={setItem}
+        currency={currency}
+      />
+      <Products
+        category={"expresso"}
+        products={products}
+        setItem={setItem}
+        currency={currency}
+      />
+      <Products
+        category={"latte"}
+        products={products}
+        setItem={setItem}
+        currency={currency}
+      />
+      <Products
+        category={"Macchiato"}
+        products={products}
+        setItem={setItem}
+        currency={currency}
+      />
     </View>
   );
 };
 
 export default ProdutsComponents;
-
-const styles = StyleSheet.create({});

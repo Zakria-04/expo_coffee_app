@@ -41,14 +41,9 @@ const Products = (props) => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.categoryText}>{category}</Text>
-      <FlatList
-        data={products}
-        renderItem={renderCoffee}
-        numColumns={2}
-        scrollEnabled={false}
-      />
+      <FlatList data={products} renderItem={renderCoffee} horizontal />
     </View>
   );
 };
@@ -56,12 +51,15 @@ const Products = (props) => {
 export default Products;
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
   itemContainer: {
     borderWidth: 1,
     borderColor: "#EEEEEE",
     padding: 10,
     borderRadius: 10,
-    margin: 20,
+    marginRight: 25,
   },
   itemImg: {
     width: 150,
@@ -83,5 +81,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     color: "#fff",
+    marginBottom: 20,
+    fontSize: 25,
   },
 });
