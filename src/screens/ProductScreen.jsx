@@ -19,27 +19,6 @@ const ProductScreen = (props) => {
   const getData = props.route.params.data;
   const [price, setPrice] = useState(getData.prices[0]);
 
-  // const cartArray = [...new Set([getData])];
-  // cartArray.concat(price);
-  // console.log("My Array ", cartArray);
-
-  // const x = [getData]
-  // const y = [{price: price}]
-  // const z = x.concat(y)
-  // console.log(z);
-
-  // const x = [getData]
-  // const y = price
-  // const z = x.push(y)
-  // console.log(x);
-
-  // const addToCartBtn = () => {
-  //   const CartList = [getData];
-  //   CartList.push(price);
-  //   console.log(CartList);
-  // // console.log("Hey");
-  // };
-
   const goBack = () => {
     props.navigation.goBack();
   };
@@ -48,7 +27,7 @@ const ProductScreen = (props) => {
     setPrice(getData.prices[0]);
   };
   const onMediomBtnClick = () => {
-    // console.log(getData.prices.splice(0,1));
+    // .log(getData.prices.splice(0,1));
     setPrice(getData.prices[1]);
   };
 

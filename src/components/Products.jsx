@@ -43,7 +43,12 @@ const Products = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.categoryText}>{category}</Text>
-      <FlatList data={products} renderItem={renderCoffee} horizontal />
+      <FlatList
+        data={products}
+        renderItem={renderCoffee}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      />
     </View>
   );
 };

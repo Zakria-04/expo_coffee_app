@@ -13,17 +13,10 @@ const ProductFootter = (props) => {
   const Navigation = useNavigation();
 
   const addToCartBtn = () => {
-    // const CartList = [getData];
-    // CartList.push(totalPrice)
-    // setCart(CartList)
-
-    // const CartList = [getData]
-    // const x = [totalPrice]
-    // const y = CartList.concat(x)
-    // console.log(y);
-    const CartList = getData
-    CartList.cartTotal = [totalPrice]
-    setCart([CartList])
+    const CartList = getData;
+    CartList.cartTotal = [totalPrice];
+    cart.push(CartList);
+    setCart([...cart]);
   };
 
   return (
@@ -38,8 +31,8 @@ const ProductFootter = (props) => {
         </View>
         <TouchableOpacity
           onPress={() => {
-            // addToCart
-            addToCartBtn()
+            getData
+            addToCartBtn();
             setCartModal(true);
           }}
         >
