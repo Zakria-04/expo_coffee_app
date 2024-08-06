@@ -53,6 +53,7 @@ const CartItem = ({ sd }) => {
               setTotalP={(newTotal) =>
                 setTotalP((prev) => ({ ...prev, [item.id]: newTotal }))
               }
+              totalP={totalP}
             />
           </View>
         </View>

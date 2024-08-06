@@ -12,7 +12,7 @@ const ProdutsComponents = (props) => {
         setItem={setItem}
         currency={currency}
       />
-      {/* <Products
+        <Products
         category={"Black Coffee"}
         products={products}
         setItem={setItem}
@@ -41,7 +41,7 @@ const ProdutsComponents = (props) => {
         products={products}
         setItem={setItem}
         currency={currency}
-      /> */}
+      />
     </View>
   );
 };

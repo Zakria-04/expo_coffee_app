@@ -3,14 +3,15 @@ import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 
 const QuantityItem = (props) => {
-  const { item, totalPrice, setCart, setTotalP } = props;
+  const { item, totalPrice, setCart, setTotalP, totalP } = props;
   const [quantity, setQuantity] = useState(item.quantity);
   // const [totalP, setTotalP] = useState(item.cartTotal[0].price);
-
   const addQuantity = () => {
     let QuantityPlus = (item.quantity += 1);
     const price = totalPrice.price * QuantityPlus;
-    const toFixedNumber = price.toFixed(2)
+    const toFixedNumber = price.toFixed(2);
+    console.log(totalP);
+    
     setTotalP(toFixedNumber);
     setQuantity(QuantityPlus);
   };
@@ -19,7 +20,9 @@ const QuantityItem = (props) => {
     if (quantity > 1) {
       let QuantityRemove = (item.quantity -= 1);
       const price = totalPrice.price / QuantityRemove;
-      const toFixedNumber = price.toFixed(2)
+      console.log(totalP);
+
+      const toFixedNumber = price.toFixed(2);
       setTotalP(toFixedNumber);
       setQuantity(QuantityRemove);
     }
