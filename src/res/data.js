@@ -9,7 +9,7 @@ const CoffeeList = [
     img: Images.americano_pic_1_square(),
     productImg: Images.americano_pic_1_portrait(),
     prices: [
-      { size: "S", price: 2.99 },
+      { size: "S", price: 2.00 },
       { size: "M", price: 3.99 },
       { size: "L", price: 5.99 },
     ],
