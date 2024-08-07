@@ -16,6 +16,8 @@ import CartItem from "./../components/CartItem";
 const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
+  console.log(cart);
+
   return (
     <View style={styles.container}>
       <SafeAreaView>

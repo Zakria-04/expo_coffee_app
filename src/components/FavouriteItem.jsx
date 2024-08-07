@@ -36,7 +36,11 @@ const FavouriteItem = (props) => {
             source={item.productImg}
             style={styles.productImg}
             imageStyle={{ borderRadius: 60 }}
-          ></ImageBackground>
+          >
+            <View style={styles.favoriteHeaderContainer}>
+              <ProductHeader getData={item} />
+            </View>
+          </ImageBackground>
         </Pressable>
       </View>
     );
@@ -69,4 +73,7 @@ const styles = StyleSheet.create({
     marginRight: 30,
     marginTop: 30,
   },
+  favoriteHeaderContainer: {
+    margin: 20
+  }
 });

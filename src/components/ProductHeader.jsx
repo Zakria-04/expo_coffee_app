@@ -5,12 +5,14 @@ import FavouriteContext from "@/store/FavouriteContext";
 import CoffeeList from "../res/data";
 
 const ProductHeader = (props) => {
-  const { goBack, getData } = props;
+  const { goBack, getData, backIcon } = props;
   const { favourite, setFavourite } = useContext(FavouriteContext);
 
   const addToFavourite = () => {
     const checkData = getData.favourite;
-    checkData === false ? getData.favourite = true : getData.favourite = false
+    checkData === false
+      ? (getData.favourite = true)
+      : (getData.favourite = false);
 
     const FavList = favourite;
     FavList.push(getData);
@@ -25,7 +27,7 @@ const ProductHeader = (props) => {
       <View style={styles.backBtnContainer}>
         <TouchableOpacity onPress={goBack}>
           <Ionicons
-            name="arrow-back-outline"
+            name={backIcon}
             size={50}
             color={"#FF8225"}
             style={styles.txt}

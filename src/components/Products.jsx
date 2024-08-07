@@ -41,14 +41,18 @@ const Products = (props) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.categoryText}>{category}</Text>
-      <FlatList
-        data={products}
-        renderItem={renderCoffee}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      />
+    <View>
+      {/* <Text style={styles.categoryText}>{category}</Text> */}
+      <View style={styles.container}>
+        <FlatList
+          data={products}
+          renderItem={renderCoffee}
+          scrollEnabled={false}
+          numColumns={2}
+          showsHorizontalScrollIndicator={false}
+          ItemSeparatorComponent={() => <View style={styles.separator} />}
+        />
+      </View>
     </View>
   );
 };
@@ -57,14 +61,17 @@ export default Products;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    // padding: 20,
+    alignItems: "center",
+    marginTop: 50
   },
   itemContainer: {
     borderWidth: 1,
     borderColor: "#EEEEEE",
     padding: 10,
     borderRadius: 10,
-    marginRight: 25,
+    marginRight: 20,
+    marginLeft: 20,
   },
   itemImg: {
     width: 150,
@@ -85,8 +92,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   categoryText: {
-    color: "#fff",
+    color: "#FF7D29",
     marginBottom: 20,
-    fontSize: 25,
+    fontSize: 30,
+    marginTop: 30,
+    marginBottom: 30,
+    marginLeft: 30
+  },
+  separator: {
+    height: 40,
   },
 });

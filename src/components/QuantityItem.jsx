@@ -1,11 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import Cart from "../screens/Cart";
 
 const QuantityItem = (props) => {
-  const { item, totalPrice, setCart, setTotalP, totalP } = props;
+  const { item, totalPrice, setCart, setTotalP, totalP, cart } = props;
   const [quantity, setQuantity] = useState(item.quantity);
-  // const [totalP, setTotalP] = useState(item.cartTotal[0].price);
 
   const addQuantity = () => {
     let QuantityPlus = (item.quantity += 1);
@@ -15,16 +15,20 @@ const QuantityItem = (props) => {
     setTotalP(fixedPrice);
     setQuantity(QuantityPlus);
   };
+  // console.log("my cart", cart);
 
   const removeQuantity = () => {
-    if (quantity > 1) {
-      let QuantityRemove = (item.quantity -= 1);
-      let price = (totalP.price -= totalPrice.price);
-      const fixedPrice = price.toFixed(2);
+    let QuantityRemove = (item.quantity -= 1);
+    let price = (totalP.price -= totalPrice.price);
+    const fixedPrice = price.toFixed(2);
+    let newItem = [item];
+    console.log("cart", cart);
 
-      setTotalP(fixedPrice);
-      setQuantity(QuantityRemove);
-    }
+    const filterItem = cart.filter((val) => val.quantity !== 0);
+    setCart(filterItem);
+
+    setTotalP(fixedPrice);
+    setQuantity(QuantityRemove);
   };
 
   return (

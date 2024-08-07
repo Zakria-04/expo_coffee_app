@@ -43,7 +43,7 @@ const ProductScreen = (props) => {
           imageStyle={styles.productImg}
         >
           <View style={styles.productHeader}>
-            <ProductHeader getData={getData} goBack={goBack} />
+            <ProductHeader getData={getData} goBack={goBack} backIcon={"arrow-back-outline"} />
           </View>
           <View style={styles.productImageFootter}>
             {/* <Text style={{ color: "red", marginTop: 20 }}>Name</Text> */}
