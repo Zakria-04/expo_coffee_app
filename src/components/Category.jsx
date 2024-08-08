@@ -5,10 +5,11 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import CoffeeList from "../res/data";
 
 const Category = ({ setItem }) => {
+  // const [selectedCategory, setSelectedCategory] = useState("cappuccino");
   const categoryList = [...new Set(CoffeeList.map((val) => val.category))];
 
   const filterItems = (cat) => {
@@ -17,17 +18,22 @@ const Category = ({ setItem }) => {
   };
 
   const returnedFilteredItems = () => {
-    return categoryList.map((val, index) => (
-      <View key={val.toString()}>
-        <TouchableOpacity
-          onPress={() => {
-            filterItems(val);
-          }}
-        >
-          <Text style={styles.category}>{val}</Text>
-        </TouchableOpacity>
-      </View>
-    ));
+    return categoryList.map((val, index) => {
+      // const backgroundColor = val === selectedCategory ? "red" : "green";
+      // console.log(selectedCategory === val);
+
+      return (
+        <View key={val.toString()}>
+          <TouchableOpacity
+            onPress={() => {
+              filterItems(val);
+            }}
+          >
+            <Text style={[styles.category]}>{val}</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    });
   };
 
   return (

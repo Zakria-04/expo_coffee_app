@@ -21,11 +21,11 @@ const QuantityItem = (props) => {
     let QuantityRemove = (item.quantity -= 1);
     let price = (totalP.price -= totalPrice.price);
     const fixedPrice = price.toFixed(2);
-    let newItem = [item];
-    console.log("cart", cart);
 
-    const filterItem = cart.filter((val) => val.quantity !== 0);
-    setCart(filterItem);
+    if (quantity <= 1) {
+      const filterItem = cart.filter((val) => val.quantity !== 0);
+      setCart(filterItem);
+    }
 
     setTotalP(fixedPrice);
     setQuantity(QuantityRemove);

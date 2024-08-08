@@ -18,11 +18,6 @@ const CartItem = ({ sd }) => {
   const [totalP, setTotalP] = useState({});
 
   const Navigation = useNavigation();
-  
-    //  const filterItem = newItem.filter((val) => val.quantity !== 0);
-    // console.log("filter", filterItem); 
-
-  
 
   const renderCart = ({ item, index }) => {
     let totalCart = item.cartTotal[0];
