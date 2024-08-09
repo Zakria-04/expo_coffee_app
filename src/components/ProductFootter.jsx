@@ -14,6 +14,7 @@ const ProductFootter = (props) => {
 
   const addToCartBtn = () => {
     const CartList = getData;
+    CartList.quantity += 1;
     CartList.cartTotal = [totalPrice];
     cart.push(CartList);
     setCart([...cart]);
@@ -31,7 +32,7 @@ const ProductFootter = (props) => {
         </View>
         <TouchableOpacity
           onPress={() => {
-            getData
+            getData;
             addToCartBtn();
             setCartModal(true);
           }}

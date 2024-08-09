@@ -19,9 +19,6 @@ const Category = ({ setItem }) => {
 
   const returnedFilteredItems = () => {
     return categoryList.map((val, index) => {
-      // const backgroundColor = val === selectedCategory ? "red" : "green";
-      // console.log(selectedCategory === val);
-
       return (
         <View key={val.toString()}>
           <TouchableOpacity
